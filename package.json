@@ -3,6 +3,11 @@
   "version": "0.1.0",
   "description": "",
   "author": "",
+  "scripts": {
+    "build": "rm -rf dist && fnm exec --using=10 gulp dist && cp dist/editor.html dist/index.html",
+    "deploy": "netlify deploy --prod",
+    "serve": "fnm exec --using=10 gulp serve"
+  },
   "devDependencies": {
     "autoprefixer-core": "^5.1.7",
     "autoprefixer-loader": "^1.2.0",
